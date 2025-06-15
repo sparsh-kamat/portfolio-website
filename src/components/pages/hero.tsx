@@ -6,22 +6,24 @@ import { Twitter } from "lucide-react";
 
 import Image from "next/image";
 import profilePhoto from "../../../public/IMG_8724.png";
+import { StarsBackground } from "../animate-ui/backgrounds/stars";
 
 export default function Hero() {
   return (
-    <section className="flex items-center min-h-screen ">
-      <div className="flex flex-col md:flex-row gap-0 md:gap-4 px-5 md:px-[12%] lg:px-[15%]   content-center   ">
+    
+    <section className="flex items-center min-h-screen justify-center lg:justify-start ">
+      <div className="flex flex-col justify-center items-center md:flex-row gap-0 md:gap-4  lg:px-[15%]  content-center   ">
         <Image
           src={profilePhoto}
           alt="Profile Photo"
           className="rounded-full flex-shrink-0 w-52 h-52 md:w-52 md:h-52 lg:w-64 lg:h-64  "
-          width={200}
-          height={200}
+          width={500}
+          height={500}
           priority // Ensures the image is loaded immediately
         />
 
         <div className="flex-col flex  justify-center">
-          <div className="flex-row flex gap-4 order-last md:order-first pt-5 md:pt-0">
+          <div className="flex-row  justify-center md:justify-start flex gap-4 order-last md:order-first pt-5 md:pt-0">
             <Link
               href="https://github.com/sparsh-kamat"
               target="_blank"
@@ -48,7 +50,7 @@ export default function Hero() {
               <Mail width={24} height={24} />
             </Link>
           </div>
-          <h1 className="text-7xl md:pt-4 font-serif text-left">
+          <h1 className="text-7xl md:pt-4 lg:pt-8 font-serif text-center md:text-left  text-primary">
             <span>Sparsh</span> {/* Add a space for the inline view */}
             <span className="block lg:inline text-primary">Kamat</span>
           </h1>
@@ -57,7 +59,10 @@ export default function Hero() {
           </p>
           
         </div>
+
       </div>
+      
     </section>
+    
   );
 }

@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Roboto_Serif } from "next/font/google";
 import CustomCursor from "@/components/custom-cursor";
 import NavbarRes from "@/components/navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
@@ -26,7 +27,10 @@ export default function RootLayout({
           <div className="flex flex-col min-h-screen flex-grow">
             <CustomCursor />
             <NavbarRes />
-            <main className="flex-grow ">{children}</main>
+            <main className="flex-grow ">
+              {children}
+              <Analytics />
+            </main>
           </div>
         </ThemeProvider>
       </body>
