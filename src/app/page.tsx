@@ -1,22 +1,29 @@
 // app/page.js
-import Image from "next/image";
+
 import Hero from "@/components/pages/hero";
 import AboutMe from "@/components/pages/aboutme";
 import Footer from "@/components/pages/footer";
 import Projects from "@/components/pages/projects";
 import History from "@/components/pages/history";
 import Contact from "@/components/pages/contact";
+import { ScrollProgress } from "@/components/animate-ui/components/scroll-progress";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <AboutMe />
-      <History />
-      <Projects />
-      <Contact />
-      <Footer />
-      
+    {/*  */}
+      <div className="absolute inset-0">
+        <div className="relative h-full w-full overflow-hidden rounded-xl">
+          <ScrollProgress progressProps={{ className: "absolute" }}>
+            <Hero />
+            <AboutMe />
+            <History />
+            <Projects />
+            <Contact />
+            <Footer />
+          </ScrollProgress>
+        </div>
+      </div>
     </>
   );
 }
