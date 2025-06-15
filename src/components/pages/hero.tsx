@@ -6,9 +6,11 @@ import { Twitter } from "lucide-react";
 
 import Image from "next/image";
 import profilePhoto from "../../../public/IMG_8724.png";
+import { StarsBackground } from "../animate-ui/backgrounds/stars";
 
 export default function Hero() {
   return (
+    
     <section className="flex items-center min-h-screen justify-center lg:justify-start ">
       <div className="flex flex-col justify-center items-center md:flex-row gap-0 md:gap-4  lg:px-[15%]  content-center   ">
         <Image
@@ -57,7 +59,10 @@ export default function Hero() {
           </p>
           
         </div>
+
       </div>
+      
     </section>
+    
   );
 }
