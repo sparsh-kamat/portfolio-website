@@ -100,7 +100,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
           width={400}
           height={225}
         />
-        <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute top-3 right-3 flex gap-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
           <a
             href={project.github}
             target="_blank"
@@ -121,11 +121,11 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
           </a>
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-6 ">
         <h3 className="text-xl lg:text-2xl font-medium text-primary mb-2">
           {project.title}
         </h3>
-        <p className="text-sm lg:text-md text-muted-foreground mb-4">
+        <p className="text-sm lg:text-md text-muted-foreground mb-4 flex flex-grow  ">
           {project.description}
         </p>
         <Separator className="my-4" />
