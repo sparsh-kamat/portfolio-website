@@ -17,8 +17,8 @@ export default function Hero() {
           src={profilePhoto}
           alt="Profile Photo"
           className="rounded-full flex-shrink-0 w-52 h-52 md:w-52 md:h-52 lg:w-64 lg:h-64  "
-          width={500}
-          height={500}
+          width={2000}
+          height={2000}
           priority // Ensures the image is loaded immediately
         />
 

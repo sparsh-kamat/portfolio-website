@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="en"  className={robotoSerif.className}>
       <body className="flex flex-col min-h-screen flex-grow">
         <ThemeProvider
           attribute="class"

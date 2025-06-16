@@ -7,6 +7,7 @@ import Projects from "@/components/pages/projects";
 import History from "@/components/pages/history";
 import Contact from "@/components/pages/contact";
 import { ScrollProgress } from "@/components/animate-ui/components/scroll-progress";
+import Technologies from "@/components/pages/technologies";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <div className="relative h-full w-full overflow-hidden rounded-xl">
           <ScrollProgress progressProps={{ className: "absolute" }}>
             <Hero />
+            {/* <Technologies /> */}
             <AboutMe />
             <History />
             <Projects />
