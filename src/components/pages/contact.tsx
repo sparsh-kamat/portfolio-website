@@ -86,9 +86,9 @@ export default function Contact() {
     <section id="contact" className="flex flex-col  py-20  lg:px-10 items-center justify-center  ">
       <div className="grid grid-cols-1 lg:gap-10 lg:grid-cols-2  w-full max-w-sm  md:max-w-2xl lg:max-w-5xl   ">
         <div className=" text-center  mb-1">
-          <h1 className="text-5xl font-serif tracking-tight leading-tight mb-3">
+          <h2 className="text-5xl font-serif tracking-tight leading-tight mb-3">
             Contact Me :)
-          </h1>
+          </h2>
           <p className="text-lg text-muted-foreground mb-8">
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision. Feel free to reach out!
@@ -235,6 +235,8 @@ export default function Contact() {
           You can also reach me directly at{" "}
           <a
             href="mailto:kamatsparsh@gmail.com"
+            target="_blank"
+            aria-label="Email Sparsh Kamat"
             className="text-primary hover:underline"
           >
             kamatsparsh@gmail.com

@@ -35,9 +35,9 @@ export default function History() {
     <section id="career" className="flex items-start justify-center min-h-screen  ">
       <div className="flex flex-col justify-center items-center py-30 lg:px-[15%] content-center ">
         <div className="max-w-3xl  text-center px-4 lg:px-0">
-          <h1 className="text-5xl  font-serif  tracking-tight leading-tight mb-10 ">
+          <h2 className="text-5xl  font-serif  tracking-tight leading-tight mb-10 ">
             Career History
-          </h1>
+          </h2>
 
           <div className="relative h-full w-full max-w-3xl md:max-w-5xl mx-auto p-4 ">
             {/* Dedicated Timeline Line */}

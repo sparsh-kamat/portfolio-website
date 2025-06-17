@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
+import { Roboto_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Roboto_Serif } from "next/font/google";
 import CustomCursor from "@/components/custom-cursor";
 import NavbarRes from "@/components/navbar";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+  title: "Sparsh Kamat - Full Stack Developer",
+  description: "The portfolio of Sparsh Kamat, a passionate Full Stack Developer creating dynamic and user-friendly web applications.",
+  keywords: ["Sparsh Kamat", "Full Stack Developer", "Next.js", "React", "TypeScript", "Portfolio"],
+};
 
 export default function RootLayout({
   children,
@@ -17,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  className={robotoSerif.className}>
+    <html lang="en"  className={robotoSerif.className} suppressHydrationWarning >
       <body className="flex flex-col min-h-screen flex-grow">
         <ThemeProvider
           attribute="class"

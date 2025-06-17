@@ -9,9 +9,9 @@ export default function AboutMe() {
     <section id="about" className="w-full py-24 sm:py-32 bg-muted/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
-        <h1 className="text-5xl font-serif tracking-tight leading-tight mb-3">
+        <h2 className="text-5xl font-serif tracking-tight leading-tight mb-3">
             About Me 
-          </h1>
+          </h2>
           <p className="text-lg text-muted-foreground mb-8">
             Hi, I'm Sparsh - a passionate Full Stack Developer with a knack for
             creating dynamic, user-friendly applications. Here's a look at the

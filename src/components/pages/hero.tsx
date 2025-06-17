@@ -24,6 +24,7 @@ export default function Hero() {
               href="https://github.com/sparsh-kamat"
               target="_blank"
               className="social-link"
+              aria-label="Visit my GitHub profile"
             >
               <Image
                 src={GithubIcon}
@@ -33,7 +34,7 @@ export default function Hero() {
                 height={24}
               />
             </Link>
-            <Link href="https://linkedin.com/in/sparshkamat" target="_blank">
+            <Link href="https://linkedin.com/in/sparshkamat" target="_blank" className="social-link" aria-label="Visit my LinkedIn profile">
               <Image
                 src={LinkedinIcon}
                 alt="LinkedIn"
@@ -42,7 +43,7 @@ export default function Hero() {
                 height={24}
               />
             </Link>
-            <Link href="mailto:kamatsparsh@gmail.com" target="_blank">
+            <Link href="mailto:kamatsparsh@gmail.com" target="_blank" className="social-link" aria-label="Send me an email">
               <Mail width={24} height={24} />
             </Link>
           </div>

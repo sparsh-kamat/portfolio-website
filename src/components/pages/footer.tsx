@@ -17,6 +17,7 @@ export default function Footer() {
             className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit my GitHub profile"
           >
             <Image
                 src={GithubIcon}
@@ -31,6 +32,7 @@ export default function Footer() {
                 className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile"
             >
               <Image
                 src={LinkedinIcon}
