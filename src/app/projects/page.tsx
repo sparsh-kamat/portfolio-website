@@ -8,7 +8,8 @@ import { HomeIcon } from "lucide-react";
 
 export default function Projects() {
   return (
-    <section className="flex flex-col min-h-dvh  items-center justify-center bg-muted/10">
+    <section className="flex flex-col min-h-dvh py-20  items-center justify-center bg-muted/10 ">
+        
       <div className="flex flex-col justify-center items-center lg:px-[15%] content-center">
         <div className="max-w-3xl mx-auto text-center px-4 lg:px-0">
           <h1 className="text-5xl font-serif tracking-tight leading-tight mb-3">
@@ -21,7 +22,7 @@ export default function Projects() {
         </div>
       </div>
       {/* grid container */}
-      <div className="flex items-center w-full max-w-6xl mx-auto px-10 xl:px-0 mb-">
+      <div className="flex items-center w-full max-w-5xl mx-auto px-10 xl:px-0 mb-">
         <div className="grid grid-cols-1 md:grid-cols-2  gap-8 w-full">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />

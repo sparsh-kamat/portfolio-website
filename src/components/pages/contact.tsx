@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
-import { Send, CheckCircle, AlertCircle,RotateCcw } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Send, CheckCircle, AlertCircle, RotateCcw } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -14,11 +14,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
-import { Alert, AlertDescription } from "../ui/alert";
-
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { sendEmail } from "@/lib/actions";
 // Form validation schema
 const contactFormSchema = z.object({
   name: z
@@ -62,26 +62,15 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      // Replace this with your actual form submission logic
-      // For example: sending to your API endpoint, EmailJS, etc.
-
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      // Example API call (replace with your actual endpoint):
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // });
-
-      // if (!response.ok) throw new Error('Failed to send message');
-
-      console.log("Form submitted:", data);
-      setSubmitStatus("error");
-      form.reset();
+      const response = await sendEmail(data);
+      if (response.success) {
+        setSubmitStatus("success");
+      } else {
+        setSubmitStatus("error");
+        throw new Error(response.message || "Failed to send email");
+      }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error sending email:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -105,7 +94,6 @@ export default function Contact() {
             opportunities to be part of your vision. Feel free to reach out!
           </p>
         </div>
-
 
         <div className="w-full max-w-sm md:max-w-lg px-4 mx-auto lg:px-0">
           {submitStatus ? (

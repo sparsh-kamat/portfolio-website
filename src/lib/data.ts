@@ -17,7 +17,7 @@ export const projects: Project[] = [
         id: 1,
         title: "Subscription Trackr",
         description: "A full-stack subscription management app built with Next.js and Prisma. Features a responsive dashboard, multi-currency conversion, and automated renewal alerts to help users track their spending.",
-        technologies: ["React", "Next.js", "Supabase", "Tailwind CSS", "Prisma", "Vercel"],
+        technologies: ["Next.js", "Supabase", "Tailwind CSS", "Prisma", "Vercel", "OAuth"],
         image: "/subscriptionTrackr.png",
         live: "https://subsciptiontrackr.vercel.app",
         github: "https://github.com/sparsh-kamat/SubscriptionTrackr",
@@ -33,3 +33,27 @@ export const projects: Project[] = [
     },
     // ... more projects
 ];
+
+
+export const frontendTech = [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn UI",
+];
+
+export const backendTech = [
+    "Next.js",
+    "Node.js",
+    "Express",
+    "Prisma",
+    "Supabase",
+    "PostgreSQL",
+    "Django",
+];
+
+export const toolsAndDevops = ["GitHub", "Vercel", "Docker", "Heroku"];
+
+export const programmingLanguages = ["JavaScript", "Java", "C++"];
+

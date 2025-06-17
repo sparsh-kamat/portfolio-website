@@ -1,29 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import {
-  IconBrandGithub,
-  IconBrandReact,
-  IconDatabase,
-  IconBrandNodejs,
-  IconBrandNextjs,
-  IconBrandTypescript,
-  IconBrandTailwind,
-  IconBrandSupabase,
-  IconBrandVercel,
-  IconBrandFramerMotion,
-  IconBrandPrisma,
-} from "@tabler/icons-react";
-import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
-import { JSX } from "react";
+import { Button } from "@/components/ui/button";
 import { projects } from "@/lib/data";
-
 import ProjectCard from "@/components/common/ProjectCard";
-
-
-
-
 
 export default function Projects() {
   return (
@@ -40,7 +19,7 @@ export default function Projects() {
         </div>
       </div>
       {/* grid container */}
-      <div className=" flex items-center w-full max-w-6xl mx-auto px-10 xl:px-0 mb-">
+      <div className=" flex items-center w-full max-w-6xl mx-auto px-10 xl:px-0 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8  w-full   ">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
@@ -48,7 +27,7 @@ export default function Projects() {
         </div>
       </div>
       <Button variant="outline" className="mt-8">
-        <Link href="#" className="flex items-center gap-2">
+        <Link href="/projects" className="flex items-center gap-2">
           View All Projects
           <ExternalLink className="w-4 h-4" />
         </Link>

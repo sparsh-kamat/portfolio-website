@@ -4,10 +4,12 @@ import Image from 'next/image';
 import {
   IconBrandGithub, IconBrandReact, IconDatabase, IconBrandNodejs,
   IconBrandNextjs, IconBrandTypescript, IconBrandTailwind, IconBrandSupabase,
-  IconBrandVercel, IconBrandFramerMotion, IconBrandPrisma, IconBrandOauth
+  IconBrandVercel, IconBrandFramerMotion, IconBrandPrisma, IconBrandOauth,IconBrandHtml5,IconBrandCss3,IconBrandMongodb,IconBrandJavascript, IconBrandDocker,IconBrandDjango
+  
 } from "@tabler/icons-react";
 import { JSX } from 'react';
-import { frame } from 'motion/react';
+
+
 
 const getTechIcon = (tech: string): JSX.Element | null => {
   const normalizedTech = tech.toLowerCase().replace(/[.\s]/g, "");
@@ -23,13 +25,42 @@ const getTechIcon = (tech: string): JSX.Element | null => {
     framermotion: <IconBrandFramerMotion size={14} className="inline mr-1.5" />,
     prisma: <IconBrandPrisma size={14} className="inline mr-1.5" />,
     github: <IconBrandGithub size={14} className="inline mr-1.5" />,
-    database: <IconDatabase size={14} className="inline mr-1.5" />,
+    postgresql: <IconDatabase size={14} className="inline mr-1.5" />,
+    html: <IconBrandHtml5 size={14} className="inline mr-1.5" />,
+    css: <IconBrandCss3 size={14} className="inline mr-1.5" />,
     oauth: <IconBrandOauth size={14} className="inline mr-1.5" />,
+    mongodb: <IconBrandMongodb size={14} className="inline mr-1.5" />,
+    javascript: <IconBrandJavascript size={14} className="inline mr-1.5" />,
+    django: <IconBrandDjango size={14} className="inline mr-1.5" />,
+    docker: <IconBrandDocker size={14} className="inline mr-1.5" />,
+    heroku: (
+      <span className="inline-flex items-center mr-1.5">
+        <Image src={"/heroku.svg"} alt="Heroku" className="invert-0 dark:invert" width={14} height={14} />
+      </span>
+    ),
+    
     shadcnui: (
       <span className="inline-flex items-center mr-1.5">
         <Image src={"/shadcn-ui.svg"} alt="Shadcn UI" className="invert-0 dark:invert" width={14} height={14} />
       </span>
     ),
+    express: (
+      <span className="inline-flex items-center mr-1.5">
+        <Image src={"/express.svg"} alt="Express" className="invert-0 dark:invert" width={14} height={14} />
+      </span>
+    ),
+    java: (
+        <span className="inline-flex items-center mr-1.5">
+            <Image src={"/java.svg"} alt="Java" className="invert-0 dark:invert" width={14} height={14} />
+        </span>
+        ),
+    c: (
+        <span className="inline-flex items-center mr-1.5">
+            <Image src={"/c.svg"} alt="C" className="invert-0 dark:invert" width={14} height={14} />
+        </span>
+    ),
+
+
     // Add any other icons you need
   };
   return techIcons[normalizedTech] || null;
