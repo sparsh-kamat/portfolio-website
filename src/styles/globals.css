@@ -142,26 +142,42 @@
   scrollbar-color: rgba(228, 219, 219, 0.281) transparent;
 }
 
-body, html {
-  /* Hide the default system cursor */
-  cursor: none;
+/* The new, responsive CSS */
+html {
+  /* Show the default cursor on mobile by default */
+  cursor: default;
+}
+
+/* This is the modern, capability-based approach */
+@media (hover: hover) {
+  html {
+    /* Hide the default cursor ONLY on devices that can truly hover */
+    cursor: none;
+  }
+}
+
+
+.touch-device .custom-cursor-dot,
+.touch-device .custom-cursor-outline {
+  display: none !important;
+}
+
+.touch-device {
+  cursor: default !important;
 }
 
 html {
   scroll-behavior: smooth;
-  /* Add this if you want a slight offset for scrolled sections */
   scroll-padding-top: 5rem; 
 }
 
 /* Show the default 'pointer' cursor when hovering over links, buttons, etc.
   This provides a fallback for accessibility and usability.
   Your custom cursor's 'scale' effect will still work on top of this.
-*/
+/* */
 a, button, [data-cursor-hover] {
-  cursor: pointer;
-}
-/* --- New Cursor Styles --- */
-/* Create dedicated classes for your cursor elements */
+  cursor: none;
+} 
 
 .custom-cursor-dot {
   background-color: var(--cursor-highlight);
