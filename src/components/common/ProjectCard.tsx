@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           width={400}
           height={225}
         />
-        <div className="absolute top-3 right-3 flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 [@media(hover:none)]:opacity-100  transition-opacity duration-300">
           <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`} className="p-2 rounded-full bg-secondary hover:bg-secondary/90 transition-colors border border-border">
             <IconBrandGithub className="w-5 h-5" />
           </a>

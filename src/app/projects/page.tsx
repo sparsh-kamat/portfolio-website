@@ -8,7 +8,7 @@ import { HomeIcon } from "lucide-react";
 
 export default function Projects() {
   return (
-    <section className="flex flex-col min-h-dvh py-30 items-center justify-center bg-muted/10">
+    <section className="flex flex-col min-h-dvh  items-center justify-center bg-muted/10">
       <div className="flex flex-col justify-center items-center lg:px-[15%] content-center">
         <div className="max-w-3xl mx-auto text-center px-4 lg:px-0">
           <h1 className="text-5xl font-serif tracking-tight leading-tight mb-3">
