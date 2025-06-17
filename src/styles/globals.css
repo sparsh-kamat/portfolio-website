@@ -73,8 +73,10 @@
   --sidebar-accent: oklch(0.967 0.001 286.375);
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
-  --cursor-highlight: #ffffff; /* Black */
-  --cursor-border: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  --cursor-highlight: #ffffff;
+  /* Black */
+  --cursor-border: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
   --sidebar-ring: oklch(0.705 0.015 286.067);
 }
 
@@ -83,8 +85,10 @@
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
-  --cursor-highlight: #ffffff; /* White */
-  --cursor-border: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  --cursor-highlight: #ffffff;
+  /* White */
+  --cursor-border: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent white */
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.92 0.004 286.32);
@@ -118,20 +122,25 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     overflow-x: hidden;
   }
+
   html {
+    /* Enables smooth scrolling for the whole page */
     scroll-behavior: smooth;
+
+    /* Adds padding to the top when scrolling to an anchor link */
+    scroll-padding-top: 5rem;
+
+    /* Sets the default cursor for touch devices */
+    cursor: default;
   }
 }
 
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem; 
-}
 .hide-scrollbar-track::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.281);
   border-radius: 9999px;
@@ -145,23 +154,16 @@ html {
 .hide-scrollbar-track {
   scrollbar-color: rgba(228, 219, 219, 0.281) transparent;
 }
-/* === START: CURSOR STYLES (Replace your old cursor CSS with this block) === */
 
-/* 1. By default (for touch devices), use the standard system cursor. */
-html {
-  cursor: default;
-}
 
-/* 2. On devices that can truly hover (desktops), hide the system cursor entirely. 
-   The browser will still show the 'pointer' hand on links automatically, 
-   which we then hide with this global rule. */
+/* === START: CURSOR STYLES === */
+
 @media (hover: hover) {
   html {
     cursor: none;
   }
 }
 
-/* 3. The JS-driven override for hybrid touch devices (the "kill-switch") */
 .touch-device .custom-cursor-dot,
 .touch-device .custom-cursor-outline {
   display: none !important;
@@ -171,7 +173,7 @@ html {
   cursor: default !important;
 }
 
-/* 4. Your cursor's visual styles (these are perfect) */
+/* cursor's visual styles */
 .custom-cursor-dot {
   background-color: var(--cursor-highlight);
   mix-blend-mode: difference;
