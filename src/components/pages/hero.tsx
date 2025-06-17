@@ -7,7 +7,7 @@ import profilePhoto from "../../../public/IMG_8724.png";
 
 export default function Hero() {
   return (
-    <section className="flex items-center min-h-screen justify-center lg:justify-start ">
+    <section id="home" className="flex items-center min-h-screen justify-center lg:justify-start ">
       <div className="flex flex-col justify-center items-center md:flex-row gap-0 md:gap-4  lg:px-[15%]  content-center   ">
         <Image
           src={profilePhoto}

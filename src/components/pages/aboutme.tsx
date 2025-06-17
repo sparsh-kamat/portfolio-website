@@ -9,20 +9,20 @@ export default function AboutMe() {
     <section id="about" className="w-full py-24 sm:py-32 bg-muted/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold font-serif tracking-tight">
-            About Me
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+        <h1 className="text-5xl font-serif tracking-tight leading-tight mb-3">
+            About Me 
+          </h1>
+          <p className="text-lg text-muted-foreground mb-8">
             Hi, I'm Sparsh - a passionate Full Stack Developer with a knack for
             creating dynamic, user-friendly applications. Here's a look at the
             technologies I work with.
           </p>
         </div>
 
-        <div className=" mx-auto mt-12 ">
+        <div className=" mx-auto mt-12 max-w-xs  md:max-w-7xl px-4 lg:px-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Frontend Card */}
-            <Card>
+            <Card >
               <CardHeader>
                 <CardTitle className="text-2xl text-primary">
                   Frontend

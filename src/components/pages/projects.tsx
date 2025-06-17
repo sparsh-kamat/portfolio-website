@@ -6,7 +6,7 @@ import ProjectCard from "@/components/common/ProjectCard";
 
 export default function Projects() {
   return (
-    <section className="flex flex-col min-h-full py-10 items-center justify-center bg-muted/10">
+    <section id="projects" className="  flex flex-col min-h-full py-20 items-center justify-center bg-muted/10">
       <div className="flex flex-col justify-center items-center  lg:px-[15%] content-center">
         <div className="max-w-3xl mx-auto text-center px-4 lg:px-0">
           <h1 className="text-5xl  font-serif  tracking-tight leading-tight mb-3">

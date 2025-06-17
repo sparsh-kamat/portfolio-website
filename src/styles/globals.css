@@ -128,6 +128,10 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; 
+}
 .hide-scrollbar-track::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.281);
   border-radius: 9999px;
@@ -141,22 +145,23 @@
 .hide-scrollbar-track {
   scrollbar-color: rgba(228, 219, 219, 0.281) transparent;
 }
+/* === START: CURSOR STYLES (Replace your old cursor CSS with this block) === */
 
-/* The new, responsive CSS */
+/* 1. By default (for touch devices), use the standard system cursor. */
 html {
-  /* Show the default cursor on mobile by default */
   cursor: default;
 }
 
-/* This is the modern, capability-based approach */
+/* 2. On devices that can truly hover (desktops), hide the system cursor entirely. 
+   The browser will still show the 'pointer' hand on links automatically, 
+   which we then hide with this global rule. */
 @media (hover: hover) {
   html {
-    /* Hide the default cursor ONLY on devices that can truly hover */
     cursor: none;
   }
 }
 
-
+/* 3. The JS-driven override for hybrid touch devices (the "kill-switch") */
 .touch-device .custom-cursor-dot,
 .touch-device .custom-cursor-outline {
   display: none !important;
@@ -166,22 +171,9 @@ html {
   cursor: default !important;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem; 
-}
-
-/* Show the default 'pointer' cursor when hovering over links, buttons, etc.
-  This provides a fallback for accessibility and usability.
-  Your custom cursor's 'scale' effect will still work on top of this.
-/* */
-a, button, [data-cursor-hover] {
-  cursor: none;
-} 
-
+/* 4. Your cursor's visual styles (these are perfect) */
 .custom-cursor-dot {
   background-color: var(--cursor-highlight);
-  /* The mix-blend-mode will make it invert over other colors */
   mix-blend-mode: difference;
 }
 
@@ -189,3 +181,4 @@ a, button, [data-cursor-hover] {
   border-color: var(--cursor-border);
 }
 
+/* === END: CURSOR STYLES === */
