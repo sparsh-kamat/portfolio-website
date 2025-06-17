@@ -73,8 +73,10 @@
   --sidebar-accent: oklch(0.967 0.001 286.375);
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
-  --cursor-highlight: #000000; /* Black */
-  --cursor-border: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  --cursor-highlight: #ffffff;
+  /* Black */
+  --cursor-border: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
   --sidebar-ring: oklch(0.705 0.015 286.067);
 }
 
@@ -83,8 +85,10 @@
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
-  --cursor-highlight: #ffffff; /* White */
-  --cursor-border: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  --cursor-highlight: #ffffff;
+  /* White */
+  --cursor-border: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent white */
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.92 0.004 286.32);
@@ -118,12 +122,21 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     overflow-x: hidden;
   }
+
   html {
+    /* Enables smooth scrolling for the whole page */
     scroll-behavior: smooth;
+
+    /* Adds padding to the top when scrolling to an anchor link */
+    scroll-padding-top: 5rem;
+
+    /* Sets the default cursor for touch devices */
+    cursor: default;
   }
 }
 
@@ -142,30 +155,27 @@
   scrollbar-color: rgba(228, 219, 219, 0.281) transparent;
 }
 
-body, html {
-  /* Hide the default system cursor */
-  cursor: none;
+
+/* === START: CURSOR STYLES === */
+
+@media (hover: hover) {
+  html {
+    cursor: none;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  /* Add this if you want a slight offset for scrolled sections */
-  scroll-padding-top: 5rem; 
+.touch-device .custom-cursor-dot,
+.touch-device .custom-cursor-outline {
+  display: none !important;
 }
 
-/* Show the default 'pointer' cursor when hovering over links, buttons, etc.
-  This provides a fallback for accessibility and usability.
-  Your custom cursor's 'scale' effect will still work on top of this.
-*/
-a, button, [data-cursor-hover] {
-  cursor: pointer;
+.touch-device {
+  cursor: default !important;
 }
-/* --- New Cursor Styles --- */
-/* Create dedicated classes for your cursor elements */
 
+/* cursor's visual styles */
 .custom-cursor-dot {
   background-color: var(--cursor-highlight);
-  /* The mix-blend-mode will make it invert over other colors */
   mix-blend-mode: difference;
 }
 
@@ -173,3 +183,4 @@ a, button, [data-cursor-hover] {
   border-color: var(--cursor-border);
 }
 
+/* === END: CURSOR STYLES === */
