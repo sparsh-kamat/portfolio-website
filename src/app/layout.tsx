@@ -15,7 +15,31 @@ const robotoSerif = Roboto_Serif({
 export const metadata: Metadata = {
   title: "Sparsh Kamat - Full Stack Developer",
   description: "The portfolio of Sparsh Kamat, a passionate Full Stack Developer creating dynamic and user-friendly web applications.",
-  keywords: ["Sparsh Kamat", "Full Stack Developer", "Next.js", "React", "TypeScript", "Portfolio"],
+  keywords: ["Sparsh Kamat", "Full Stack Developer", "Next.js", "React", "TypeScript", "Portfolio", "Full Stack", "Web Development"],
+  authors: [{ name: "Sparsh Kamat", url: "https://www.sparshkamat.me" }],
+  creator: "Sparsh Kamat",
+
+  openGraph: {
+    type: 'website',
+    url: 'https://www.sparshkamat.me',
+    title: 'Sparsh Kamat - Full Stack Developer',
+    description: 'The portfolio of Sparsh Kamat...',
+    images: [
+      {
+        url: 'https://www.sparshkamat.me/og-image.png', 
+        width: 1200,
+        height: 630,
+        alt: 'Sparsh Kamat Portfolio',
+      },
+    ],
+  },
+  
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sparsh Kamat - Full Stack Developer',
+    description: 'The portfolio of Sparsh Kamat...',
+    images: ['https://www.sparshkamat.me/og-image.png'],
+  },
 };
 
 export default function RootLayout({
