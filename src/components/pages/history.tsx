@@ -2,35 +2,13 @@
 
 import { Briefcase, GraduationCap, Code } from "lucide-react";
 import { clsx } from "clsx";
+import { historyData } from "@/lib/data";
+import { motion } from "motion/react";
 
-const historyData = [
-  {
-    icon: Briefcase,
-    title: "SDE Intern",
-    company: "Visteon",
-    date: "2024 - 2024",
-    description:
-      "Led the development of scalable web applications using Next.js and TypeScript, focusing on performance and user experience.",
-  },
-  {
-    icon: Code,
-    title: "Started with web development",
-    company: "theodinproject.com",
-    date: "2023 - 2025",
-    description:
-      "Began my journey in web development, learning how learn technologies through documentation. Developed several personal projects to enhance my skills.",
-  },
-  {
-    icon: GraduationCap,
-    title: "B.E(Hons) in Computer Science",
-    institution: "Goa College of Engineering",
-    date: "2021 - 2025",
-    description:
-      "Graduated with a 8.6 GPA, focusing on computer science and software development principles.",
-  },
-];
 
 export default function History() {
+
+
   return (
     <section id="career" className="flex items-start justify-center min-h-screen  ">
       <div className="flex flex-col justify-center items-center py-27 lg:px-[15%] content-center ">

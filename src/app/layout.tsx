@@ -59,7 +59,7 @@ export default function RootLayout({
           <div className="flex flex-col min-h-screen flex-grow">
             <CustomCursor />
             <NavbarRes />
-            <main className="flex-grow ">
+            <main className="flex-grow relative z-10">
               {children}
               <Analytics />
               <SpeedInsights />

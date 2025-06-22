@@ -4,11 +4,13 @@ import { Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import profilePhoto from "../../../public/IMG_8724.png";
-
+import { AuroraBackground } from "../ui/aurora-background";
 export default function Hero() {
   return (
-    <section id="home" className="flex items-center min-h-screen justify-center lg:justify-start ">
-      <div className="flex flex-col justify-center items-center md:flex-row gap-0 md:gap-4  lg:px-[15%]  content-center   ">
+    <section id="home" className="flex items-center min-h-screen justify-center lg:justify-start sticky top-0 ">
+      <AuroraBackground className="absolute inset-0 -z-10" showRadialGradient={false} />
+     
+      <div className="flex flex-col justify-center items-center md:flex-row gap-0 md:gap-4  lg:px-[15%]  content-center  ">
         <Image
           src={profilePhoto}
           alt="Profile Photo"
