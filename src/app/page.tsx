@@ -11,19 +11,13 @@ import { ScrollProgress } from "@/components/animate-ui/components/scroll-progre
 export default function Home() {
   return (
     <>
-    {/*  */}
-      <div className="absolute inset-0">
-        <div className="relative h-full w-full overflow-hidden rounded-xl">
-          <ScrollProgress progressProps={{ className: "absolute" }}>
-            <Hero />
-            <AboutMe />
-            <History />
-            <Projects />
-            <Contact />
-            <Footer />
-          </ScrollProgress>
-        </div>
-      </div>
+      <ScrollProgress />
+      <Hero />
+      <AboutMe />
+      <History />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }

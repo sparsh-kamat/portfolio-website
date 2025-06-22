@@ -6,7 +6,7 @@ import { frontendTech, backendTech, toolsAndDevops, programmingLanguages } from 
 
 export default function AboutMe() {
   return (
-    <section id="about" className="w-full py-24 sm:py-32 bg-muted/10">
+    <section id="about" className="w-full py-27  bg-muted/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-5xl font-serif tracking-tight leading-tight mb-3">
@@ -20,7 +20,7 @@ export default function AboutMe() {
         </div>
 
         <div className=" mx-auto mt-12 max-w-xs  md:max-w-7xl px-4 lg:px-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-3">
             {/* Frontend Card */}
             <Card >
               <CardHeader>

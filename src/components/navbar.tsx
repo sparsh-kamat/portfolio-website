@@ -44,9 +44,13 @@ export default function Navbar() {
     e.preventDefault(); // Stop the default jump
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
+      const navbarHeight = 0; // The height of your navbar in pixels (h-16 = 4rem = 64px)
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
         behavior: "smooth",
-        block: "start", // Aligns the top of the section to the top of the viewport
       });
     }
   };
@@ -58,7 +62,7 @@ export default function Navbar() {
       const sections: HTMLElement[] = navLinks
         .map((link) => document.getElementById(link.id))
         .filter((el) => el !== null) as HTMLElement[];
-      const scrollPosition = window.scrollY + 160;
+      const scrollPosition = window.scrollY +160 ;
 
       for (const section of sections) {
         // The check for section is implicitly handled by the filter above

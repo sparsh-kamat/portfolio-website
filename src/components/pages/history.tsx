@@ -33,7 +33,7 @@ const historyData = [
 export default function History() {
   return (
     <section id="career" className="flex items-start justify-center min-h-screen  ">
-      <div className="flex flex-col justify-center items-center py-30 lg:px-[15%] content-center ">
+      <div className="flex flex-col justify-center items-center py-27 lg:px-[15%] content-center ">
         <div className="max-w-3xl  text-center px-4 lg:px-0">
           <h2 className="text-5xl  font-serif  tracking-tight leading-tight mb-10 ">
             Career History
