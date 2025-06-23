@@ -13,11 +13,18 @@ const robotoSerif = Roboto_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.sparshkamat.me'),
   title: "Sparsh Kamat - Full Stack Developer",
   description: "The portfolio of Sparsh Kamat, a passionate Full Stack Developer creating dynamic and user-friendly web applications.",
   keywords: ["Sparsh Kamat", "Full Stack Developer", "Next.js", "React", "TypeScript", "Portfolio", "Full Stack", "Web Development"],
   authors: [{ name: "Sparsh Kamat", url: "https://www.sparshkamat.me" }],
   creator: "Sparsh Kamat",
+
+  alternates: {
+    canonical: '/',
+  },
+
+  
 
   openGraph: {
     type: 'website',
