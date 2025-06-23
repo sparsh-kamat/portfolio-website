@@ -19,7 +19,7 @@ export const projects: Project[] = [
         title: "Subscription Trackr",
         description: "A full-stack subscription management app built with Next.js and Prisma. Features a responsive dashboard, multi-currency conversion, and automated renewal alerts to help users track their spending.",
         technologies: ["Next.js", "Supabase", "Tailwind CSS", "Prisma", "Vercel", "OAuth"],
-        image: "/subscriptionTrackr.png",
+        image: "/subscriptionTrackr.jpg",
         live: "https://subsciptiontrackr.vercel.app",
         github: "https://github.com/sparsh-kamat/SubscriptionTrackr",
     },
@@ -28,7 +28,7 @@ export const projects: Project[] = [
         title: "Portfolio Website",
         description: "A modern, SEO-optimized portfolio showcasing my skills and projects. Built from the ground up with Next.js, Tailwind CSS, and Framer Motion to create a fast and engaging user experience.",
         technologies: ["Next.js", "React", "TypeScript", "Shadcn UI", "Tailwind CSS"],
-        image: "/portfoliomockup.png",
+        image: "/portfoliomockup.jpg",
         live: "#", // You can link to the portfolio itself
         github: "https://github.com/sparsh-kamat/portfolio-website",
     },
