@@ -8,7 +8,7 @@ import { AuroraBackground } from "../ui/aurora-background";
 export default function Hero() {
   return (
     <section id="home" className="flex items-center min-h-screen justify-center lg:justify-start sticky top-0 ">
-      <AuroraBackground className="absolute inset-0 -z-10" showRadialGradient={false} />
+      <AuroraBackground className="absolute inset-0 -z-10" showRadialGradient={true} />
      
       <div className="flex flex-col justify-center items-center md:flex-row gap-0 md:gap-4  lg:px-[15%]  content-center  ">
         <Image
@@ -17,7 +17,7 @@ export default function Hero() {
           className="rounded-full flex-shrink-0 w-52 h-52 md:w-52 md:h-52 lg:w-64 lg:h-64  "
           width={2000}
           height={2000}
-          priority // Ensures the image is loaded immediately
+          priority={true}
         />
 
         <div className="flex-col flex  justify-center">

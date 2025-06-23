@@ -83,7 +83,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="flex flex-col  py-20  lg:px-10 items-center justify-center  ">
+    <section id="contact" className="flex flex-col  pt-20 pb-10  lg:px-10 items-center justify-center  ">
       <div className="grid grid-cols-1 lg:gap-10 lg:grid-cols-2  w-full max-w-sm  md:max-w-2xl lg:max-w-5xl   ">
         <div className=" text-center  mb-1">
           <h2 className="text-5xl font-serif tracking-tight leading-tight mb-3">

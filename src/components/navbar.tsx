@@ -2,41 +2,37 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ModeToggle } from "./ui/themeToggle"; // Your existing theme toggle
+import { ModeToggle } from "./ui/themeToggle";
 import { Shantell_Sans } from "next/font/google";
-//import three bars for mobile menu
 import { Menu } from "lucide-react";
-
-//dropdown menu for mobile
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu"; // Assuming you have a dropdown menu component
+} from "./ui/dropdown-menu";
+import { ScrollProgress } from "./animate-ui/components/scroll-progress";
 
-// 2. Instantiate the font with desired settings
-const shantellSans = Shantell_Sans({
-  subsets: ["latin"],
-  weight: ["700"], // Using a bold weight for the logo
-});
+// const shantellSans = Shantell_Sans({
+//   subsets: ["latin"],
+//   weight: ["700"], // Using a bold weight for the logo
+// });
 
-// Define a type for our navigation links for type safety
+// type for navigation links
 interface NavLink {
   id: string;
   label: string;
 }
 
 const navLinks: NavLink[] = [
-  { id: "home", label: "Home" }, // Shortened for consistency
+  { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "career", label: "Career" },
   { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" }, // Shortened for consistency
+  { id: "contact", label: "Contact" },
 ];
 
 export default function Navbar() {
-  // Inside your Navbar component, before the `return` statement
   const handleScrollClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     targetId: string
@@ -62,7 +58,7 @@ export default function Navbar() {
       const sections: HTMLElement[] = navLinks
         .map((link) => document.getElementById(link.id))
         .filter((el) => el !== null) as HTMLElement[];
-      const scrollPosition = window.scrollY +160 ;
+      const scrollPosition = window.scrollY + 160;
 
       for (const section of sections) {
         // The check for section is implicitly handled by the filter above
@@ -132,6 +128,7 @@ export default function Navbar() {
           </DropdownMenu>
         </div>
       </div>
+      <ScrollProgress />
     </header>
   );
 }
