@@ -237,7 +237,7 @@ export default function Contact() {
             href="mailto:kamatsparsh@gmail.com"
             target="_blank"
             aria-label="Email Sparsh Kamat"
-            className="text-primary hover:underline"
+            className="text-primary underline underline-offset-4 hover:text-primary/90"
           >
             kamatsparsh@gmail.com
           </a>
