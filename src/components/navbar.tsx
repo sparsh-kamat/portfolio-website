@@ -117,7 +117,8 @@ export default function Navbar() {
         <div className="md:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="p-2 rounded-md hover:bg-muted">
+              <button className="p-2 rounded-md hover:bg-muted"
+              aria-label="Open navigation  menu">
                 <Menu className="h-6 w-6" />
               </button>
             </DropdownMenuTrigger>
