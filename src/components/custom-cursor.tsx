@@ -10,6 +10,10 @@ export default function CustomCursor() {
   const pathname = usePathname(); // Get the current page path
 
   useEffect(() => {
+    //reset hover state when the user navigates to a new page
+    setIsHovering(false);
+    setIsVisible(true); // Reset visibility when navigating to a new page
+
     // This effect runs once to detect touch hardware and mark the body.
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (isTouchDevice) {
