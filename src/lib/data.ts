@@ -80,7 +80,7 @@ export const historyData = [
       company: "Visteon",
       date: "2024 - 2024",
       description:
-        "Led the development of scalable web applications using Next.js and TypeScript, focusing on performance and user experience.",
+        "Worked on the AOSP framework, enhancing CarService functionality and improving Android services within an automotive context.  Gained hands-on experience with porting features across different Android versions and hardware platforms such as Exynos, Snapdragon, and MediaTek.",
     },
     {
       icon: Code,
