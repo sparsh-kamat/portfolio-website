@@ -76,6 +76,14 @@ export const projects: Project[] = [
 export const historyData = [
     {
       icon: Briefcase,
+      title: "SDE Ⅰ",
+      company: "Visteon",
+      date: "2025 - Present",
+      description:
+        "Currently at Visteon, I bridge the gap between hardware abstraction layers (HAL) and the application framework, ensuring system stability across complex vehicle power cycles in Vehicle infotainments in different products.",
+    },
+    {
+      icon: Briefcase,
       title: "SDE Intern",
       company: "Visteon",
       date: "2024 - 2024",
